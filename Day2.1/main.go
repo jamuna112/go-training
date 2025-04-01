@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 
@@ -128,6 +131,16 @@ func main() {
 		if number is divisible by 5, print value buzz
 		if number id divisible by 3 and 5, print fizz buzz
 	*/
+	fmt.Println("===================================")
+	var number int = 10
+	if number%3 == 0 && number%5 == 0 {
+		fmt.Printf("value %v fizz buzz\n", number)
+	} else if number%3 == 0 && number%5 != 0 {
+		fmt.Printf("value %v fizz\n", number)
+	} else if number%5 == 0 && number%3 != 0 {
+		fmt.Printf("value %v buzz\n", number)
+	}
+	fmt.Println("===================================")
 
 	/*
 		Find a perfect square, given a number print if it is perfect square or not eg:
@@ -135,4 +148,13 @@ func main() {
 		26, 30.. are not perfect square
 		36 is perfect square
 	*/
+	var number2 int = 37
+	perfectSquare := math.Sqrt(float64(number2))
+
+	if perfectSquare == float64((int(perfectSquare))) {
+		fmt.Printf("number %v is square root of %v\n", number2, perfectSquare)
+	} else {
+		fmt.Printf("number %v is not a square root\n", number2)
+	}
+	fmt.Println("===================================")
 }
