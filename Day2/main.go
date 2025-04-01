@@ -40,7 +40,7 @@ func main() {
 	// num7 := num3 | num4
 	// fmt.Printf("num6: %6v, b: %6b\n", num7, num7)
 
-	num8 := num3 ^ num4 //xor, if one is value is zero and another value is one then result is one. Otherwise zero
+	num8 := num3 ^ num4 //xor, if one value is zero and another value is one then result is one. Otherwise zero
 	fmt.Printf("num8: %6v, b: %6b\n", num8, num8)
 
 	num3 <<= 1
@@ -48,4 +48,25 @@ func main() {
 
 	num4 >>= 1
 	fmt.Printf("num4: %6v, b: %6b\n", num4, num4)
+
+	//Practice bitwise assignment operators
+	//Bitwise AND assignment
+	value1 := 5 // 0101
+	value2 := 2 // 0010
+	value3 := value1 & value2
+	fmt.Printf("value 3 is %v, binary is: %b\n", value3, value3) //0000
+
+	//Bitwise OR assignment
+	value4 := value1 | value2
+	fmt.Printf("value 4 is %v, binary is: %b\n", value4, value4) //0111
+
+	//Bitwise XOR assignment
+	value5 := value1 ^ value2
+	fmt.Printf("value 5 is %v, binary is: %b\n", value5, value5) //0111
+
+	//right shift assignment
+	value6 := 9                                                  //1001
+	value6 >>= 2                                                 //right shift by 2 position
+	fmt.Printf("value 6 is %v, binary is: %b\n", value6, value6) //10
+
 }
