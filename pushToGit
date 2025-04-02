@@ -1,6 +1,6 @@
 comment="$@"
-echo "push into git"
-git -v remote
+echo "adding comment: $comment"
+git remote -v
 git status
 git add .
 git commit -m "$comment"
