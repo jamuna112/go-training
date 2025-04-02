@@ -135,9 +135,9 @@ func main() {
 	var number int = 10
 	if number%3 == 0 && number%5 == 0 {
 		fmt.Printf("value %v fizz buzz\n", number)
-	} else if number%3 == 0 && number%5 != 0 {
+	} else if number%3 == 0 {
 		fmt.Printf("value %v fizz\n", number)
-	} else if number%5 == 0 && number%3 != 0 {
+	} else if number%5 == 0 {
 		fmt.Printf("value %v buzz\n", number)
 	}
 	fmt.Println("===================================")
