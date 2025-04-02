@@ -1,0 +1,7 @@
+comment="$@"
+echo "push into git"
+git -v remote
+git status
+git add .
+git commit -m "$comment"
+git push origin master
