@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	/*
@@ -139,23 +141,52 @@ func main() {
 
 	_ = str1 //we are ignoring the variable str1
 
+	fmt.Println("=========================================")
 	/*
-	write a program, create a loop of 10 numbers, create another loop of 10 strings which will 
-	tell odd or even of number array.
-	Eg: n = {12, 11, 10} // this is input
-	s = {even, odd, even} //this should be the output of array
-	actual output on screan 
-	12 - even
-	11 - odd
-	10 - even
+		write a program, create a loop of 10 numbers, create another loop of 10 strings which will
+		tell odd or even of number array.
+		Eg: n = {12, 11, 10} // this is input
+		s = {even, odd, even} //this should be the output of array
+		actual output on screan
+		12 - even
+		11 - odd
+		10 - even
 	*/
+	givenInput := [10]int{12, 11, 10, 22, 19, 32, 4, 30, 1, 51}
+	var outputStr string
+	for i := 0; i < 10; i++ {
+		if givenInput[i]%2 == 0 {
+			outputStr = "even"
+		} else {
+			outputStr = "odd"
+		}
+		fmt.Printf("%v - %v\n", givenInput[i], outputStr)
+	}
+	fmt.Println("=========================================")
 
 	/*
-	Given a number, first bit if it is 1 it is a positive number, if first bit is 0 it is negative number
-	Eg: n = 1010 = +2
-	n = 0111 = -7
-	example 100100 
-	0110110
+		Given a number, first bit if it is 1 it is a positive number, if first bit is 0 it is negative number
+		Eg: n = 1010 = +2
+		n = 0111 = -7
+		example 100100
+		0110110
 	*/
+
+	// givenBitNum := "10010"
+	// var valueSign string
+	// remainingBitElement := givenBitNum[1:] //currently it's in string
+	// //convert remaining to integer value
+	// remainingBitElementToInt, _ := strconv.ParseInt(remainingBitElement, 2, 64)
+
+	// for i := 0; i < len(givenBitNum); i++ {
+	// 	if givenBitNum[0] == '1' {
+	// 		valueSign = "+"
+
+	// 	} else {
+	// 		valueSign = "-"
+	// 		remainingBitElement = valueSign + remainingBitElement
+	// 	}
+	// }
+	// fmt.Printf("value is %v\n", remainingBitElement)
 
 }
