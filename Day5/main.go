@@ -68,7 +68,6 @@ func main() {
 		fmt.Println()
 	}
 
-	fmt.Println("Matrix math2 and math3:")
 	var math2 = [3][3]int{{10, 20, 30}, {40, 50, 60}, {70, 80, 90}}
 	var math3 = [3][3]int{{100, 200, 300}, {400, 500, 600}, {700, 800, 900}}
 
@@ -91,6 +90,18 @@ func main() {
 	/*
 		Create a new variable for math4 which will have addition of math2 and math 3 - matrix addition
 	*/
+
+	fmt.Println("Matrix addition of math2 and math3:")
+	var math4 = [3][3]int{}
+
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 3; j++ {
+			math4[i][j] = math2[i][j] + math3[i][j]
+			fmt.Printf("%5v", math4[i][j])
+		}
+		fmt.Println()
+
+	}
 
 	//Map
 	//var c1 map[string]string
