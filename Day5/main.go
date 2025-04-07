@@ -175,7 +175,7 @@ func main() {
 		v = {"even": 2, "odd":2, "perfect square": 1, "prime number": 2 } //output should be in map
 	*/
 
-	givenArray := [6]int{4, 5, 9, 8, 6, 11}
+	givenArray := []int{4, 5, 9, 8, 6, 11, 13, 19, 22, 2, 3}
 	resultMap := map[string]int{
 		"even":           0,
 		"odd":            0,
@@ -185,6 +185,7 @@ func main() {
 
 	var squareNum int
 	_ = resultMap
+	var isPrime bool
 
 	//count of even and odd
 	for i := 0; i < len(givenArray); i++ {
@@ -199,11 +200,25 @@ func main() {
 		if givenArray[i] == squareNum*squareNum {
 			resultMap["perfect square"]++
 		}
-
 		//count of prime number
-		if isPrime(givenArray[i]) {
-			resultMap["prime number"]++
+		isPrime = true
+		var newArr = givenArray[i]
+		for j := 2; j < newArr-1; j++ {
+			k := givenArray[i] % j
+			if k == 0 {
+				isPrime = false
+				break
+			}
+
 		}
+		if isPrime {
+			resultMap["prime number"]++
+			fmt.Printf("given number of i: %v\n", givenArray[i])
+		}
+
+		// if isPrime(givenArray[i]) {
+		// 	resultMap["prime number"]++
+		// }
 
 	}
 	fmt.Println(resultMap)
