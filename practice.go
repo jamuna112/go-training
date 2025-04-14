@@ -57,22 +57,14 @@ func main() {
 	// students = append(students, student)
 	// fmt.Printf("student details %v\n", students)
 
-	//================== sorting =================//
-	arr := [8]int{41, 11, 9, 15, 19, 3, 1, 10}
-	var temp int
+	//===============Runes===============//
+	str := "hello"
+	r := []rune(str)
+	fmt.Println(str)
+	fmt.Println(r)
 
-	for i := 0; i < len(arr)-1; i++ {
-		fmt.Printf("i:%v - %v\n", i+1, arr[i])
-		for j := 0; j < len(arr)-i-1; j++ {
-			if arr[i] > arr[j] {
-				temp = arr[i]
-				arr[i] = arr[j]
-				arr[j] = arr[i]
-			}
-
-		}
-		fmt.Printf("array value %v\n", arr)
-		fmt.Printf("temp value %v\n", temp)
+	for i, v := range r {
+		fmt.Printf("rune at position %v is %c\n", i, v)
 	}
 
 }
