@@ -173,16 +173,19 @@ eg: abc => cba
 hello => olleh
 */
 func ReverseStr(word string) string {
-	runes := []rune(word)
+	runes := []byte(word)
 	length := len(runes)
 
-	for i := 0; i < length/2; i++ {
-		runes[i], runes[length-1-i] = runes[length-1-i], runes[i]
+	for i := 0; i < length; i++ {
+		l := word[length-1-i]
+		runes[i] = word[l]
+		//runes[i], runes[length-1-i] = runes[length-1-i], runes[i]
 	}
 
 	return string(runes)
 }
 
+// create new one with the reverse function
 func isPalindrome(str string) bool {
 	runes := []rune(str)
 	length := len(runes)
