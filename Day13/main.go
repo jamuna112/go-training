@@ -41,9 +41,7 @@ func main() {
 	fmt.Print("Displaying matrix 2:\n")
 	displayMatrix(matrix, matrix2)
 
-	fmt.Print("Addition of matrix 1 and matrix 2:\n")
-	result := additionMatrix(matrix, matrix1, matrix2)
-	displayMatrix(matrix, result)
+	performOperation(matrix, matrix1, matrix2)
 
 }
 
@@ -84,4 +82,41 @@ func additionMatrix(matx Matrix, matrix1, matrix2 [][]int) [][]int {
 		}
 	}
 	return add
+}
+
+func subtractionMatrix(matx Matrix, matrix1, matrix2 [][]int) [][]int {
+
+	sub := make([][]int, matx.rows*matx.cols)
+	var output int
+
+	for i := 0; i < matx.rows; i++ {
+		for j := 0; j < matx.cols; j++ {
+			output = matrix1[i][j] - matrix2[i][j]
+			sub[i] = append(sub[i], output)
+		}
+	}
+	return sub
+}
+
+func performOperation(matx Matrix, matrix1, matrix2 [][]int) {
+	var userInput string
+	for {
+		fmt.Print("what operation you want to perform? add or sub: ")
+		fmt.Scanf("%v", &userInput)
+
+		if userInput == "add" {
+			addMatrix := additionMatrix(matx, matrix1, matrix2)
+			fmt.Println("Displaying addition of matrix:")
+			displayMatrix(matx, addMatrix)
+			break
+		} else if userInput == "sub" {
+			subMatrix := subtractionMatrix(matx, matrix1, matrix2)
+			fmt.Println("Displaying subtraction of matrix:")
+			displayMatrix(matx, subMatrix)
+			break
+		} else {
+			fmt.Println("Invalid input!")
+		}
+	}
+
 }
