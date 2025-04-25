@@ -19,30 +19,30 @@ type Matrix struct {
 	row, col int
 }
 
-func main() {
+// func main() {
 
-	var rows, cols int
-	fmt.Println("User input for matrix 1 and matrix 2:")
-	fmt.Print("Enter number of rows and column for matrix: ")
-	fmt.Scanf("%v", &rows)
-	fmt.Scanf("%v", &cols)
+// 	var rows, cols int
+// 	fmt.Println("User input for matrix 1 and matrix 2:")
+// 	fmt.Print("Enter number of rows and column for matrix: ")
+// 	fmt.Scanf("%v", &rows)
+// 	fmt.Scanf("%v", &cols)
 
-	matrix := Matrix{row: rows, col: cols}
+// 	matrix := Matrix{row: rows, col: cols}
 
-	fmt.Print("Enter value for matrix 1: ")
-	matrix1 := inputMatrix(matrix)
-	fmt.Println("Displaying matrix 1:")
-	displayMatrix(matrix, matrix1)
-	fmt.Print("Enter value for matrix 2: ")
-	matrix2 := inputMatrix(matrix)
-	fmt.Println("Displaying matrix 2:")
-	displayMatrix(matrix, matrix2)
+// 	fmt.Print("Enter value for matrix 1: ")
+// 	matrix1 := inputMatrix(matrix)
+// 	fmt.Println("Displaying matrix 1:")
+// 	displayMatrix(matrix, matrix1)
+// 	fmt.Print("Enter value for matrix 2: ")
+// 	matrix2 := inputMatrix(matrix)
+// 	fmt.Println("Displaying matrix 2:")
+// 	displayMatrix(matrix, matrix2)
 
-	addMatrix := matrixAddition(matrix, matrix1, matrix2)
-	fmt.Println("Displaying addition of matrix:")
-	displayMatrix(matrix, addMatrix)
+// 	addMatrix := matrixAddition(matrix, matrix1, matrix2)
+// 	fmt.Println("Displaying addition of matrix:")
+// 	displayMatrix(matrix, addMatrix)
 
-}
+// }
 
 // enter value for matrix 1
 func inputMatrix(matx Matrix) [][]int {
